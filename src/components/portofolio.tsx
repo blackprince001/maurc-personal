@@ -10,7 +10,6 @@ import { LoadingState } from "./loading-state"
 import { NavLink } from "./navbar"
 import { ContactSection } from "./contact"
 
-
 const ResearchPortfolio: React.FC = () => {
     const [, setActiveSection] = useState<string>("home")
     const [publications, setPublications] = useState<Publication[]>([])
@@ -73,7 +72,7 @@ const ResearchPortfolio: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-zinc-50">
-            <header className="bg-gradient-to-r from-blue-600 to-blue-700">
+            <header className="bg-[#FF5400]">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center justify-between py-6">
                         {/* Name on the left */}
@@ -96,7 +95,7 @@ const ResearchPortfolio: React.FC = () => {
             </header>
 
             <main className="space-y-24">
-                <section id="home" className="bg-gradient-to-b from-blue-600 to-blue-700">
+                <section id="home" className="bg-[#FF5400]">
                     <div className="max-w-7xl mx-auto px-4 py-16">
                         <ProfilePage researcherInfo={researcherInfo} />
                     </div>

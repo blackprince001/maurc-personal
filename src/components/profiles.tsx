@@ -8,7 +8,7 @@ export default function ProfilePage({ researcherInfo }: { researcherInfo: Resear
     <div className="grid lg:grid-cols-[2fr,1fr] gap-12 items-start">
       <div className="space-y-12">
         <div className="flex items-start gap-8">
-          <div className="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0 border-4 border-white/10">
+          <div className="relativer w-28 rounded-2xl overflow-hidden shrink-0 border-4 border-white/10">
             <img src="/maurc-logo.svg" alt="Profile" className="object-cover" />
           </div>
           <div className="space-y-4 pt-2">
@@ -48,7 +48,7 @@ export default function ProfilePage({ researcherInfo }: { researcherInfo: Resear
         </div>
       </div>
 
-      <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden border-4 border-white/10">
+      <div className="relative rounded-2xl overflow-hidden border-4 border-white/10">
         <img src={researcherInfo.profile_image || "/maurc-logo.svg"} alt="Researcher" className="object-cover" />
       </div>
     </div>
