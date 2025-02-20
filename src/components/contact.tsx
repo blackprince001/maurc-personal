@@ -16,24 +16,7 @@ export const ContactSection = () => {
                                 contact@example.com
                             </a>
                         </div>
-                        <div>
-                            <h3 className="text-lg font-medium mb-2">Office</h3>
-                            <p className="text-zinc-500">
-                                Room 123, Computer Science Building
-                                <br />
-                                University Name
-                                <br />
-                                City, State ZIP
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-medium mb-2">Office Hours</h3>
-                            <p className="text-zinc-500">
-                                Monday - Thursday: 2:00 PM - 4:00 PM
-                                <br />
-                                Or by appointment
-                            </p>
-                        </div>
+
                         <div>
                             <h3 className="text-lg font-medium mb-2">Social</h3>
                             <div className="flex gap-6">

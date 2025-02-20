@@ -1,19 +1,21 @@
 // types.ts
 export interface Publication {
+    id: number;
+    user_id: number;
     title: string;
     abstract: string;
     authors: string;
     publication_type: string;
-    journal: string;
-    conference: string;
+    journal?: string;
+    conference?: string;
     year: number;
-    doi: string;
+    doi?: string;
     is_org: boolean;
-    poster: string;
-    url: string;
-    pdf_link: string;
-    id: number;
-}
+    poster?: string;
+    paper_summary?: string;
+    url?: string;
+    pdf_link?: string;
+  }
 
 export interface Course {
     name: string;
@@ -40,10 +42,17 @@ export interface Project {
 }
 
 export interface ResearcherInfo {
-    id: number;
-    user_id: number;
-    home_content: string[];
-    projects: Project[];
-    teachings: string[];
-    cv_link: string;
+  id: number;
+  user_id: string;
+  name: string;
+  org_role: 'advisory' | 'team' | 'fellow';
+  home_content?: string[];
+  cv_link?: string;
+  profile_image?: string;
+  projects: {
+    title: string;
+    description: string;
+    url: string;
+  }[];
+  teachings: string[];
 }

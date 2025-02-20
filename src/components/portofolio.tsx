@@ -77,7 +77,7 @@ const ResearchPortfolio: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center justify-between py-6">
                         {/* Name on the left */}
-                        <div className="text-white text-center md:text-left text-3xl font-medium">Michael Appiah-Kubi</div>
+                        <div className="text-white text-center md:text-left text-3xl font-medium">{researcherInfo?.name}</div>
 
                         {/* Navigation on the right */}
                         <nav className="flex md:bg-transparent">
@@ -106,7 +106,7 @@ const ResearchPortfolio: React.FC = () => {
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="grid md:grid-cols-[300px,1fr] gap-8">
                             <div className="md:sticky md:top-24 space-y-4">
-                                <h2 className="text-2xl font-semibold">Publications</h2>
+                                <h2 className="text-2xl font-semibold">Publications & Science Communication</h2>
                                 <p className="text-zinc-500">Browse through my research publications and academic work.</p>
                             </div>
                             <div className="space-y-6">
@@ -148,16 +148,31 @@ const ResearchPortfolio: React.FC = () => {
                                                     )}
                                                 </div>
                                             </div>
-                                        </div>
-                                        {pub.poster && (
-                                            <div className="md:w-72 h-auto">
-                                                <img
-                                                    className="w-full h-full object-cover"
-                                                    src={pub.poster || "/placeholder.svg"}
-                                                    alt="Publication poster"
-                                                />
+                                            <div className="border-t pt-4">
+                                                <div className="w-full">
+                                                    <h4 className="text-sm font-medium mb-2">Audio Summary</h4>
+                                                    <iframe
+                                                        width="100%"
+                                                        height="166"
+                                                        scrolling="no"
+                                                        frameBorder="no"
+                                                        allow="autoplay"
+                                                        src={`https://w.soundcloud.com/player/?url=${pub.paper_summary && encodeURIComponent(pub.paper_summary)}&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`}
+                                                    ></iframe>
+                                                </div>
                                             </div>
-                                        )}
+                                        </div>
+                                        {
+                                            pub.poster && (
+                                                <div className="md:w-72 h-auto">
+                                                    <img
+                                                        className="w-full h-full object-cover"
+                                                        src={pub.poster || "/placeholder.svg"}
+                                                        alt="Publication poster"
+                                                    />
+                                                </div>
+                                            )
+                                        }
                                     </div>
                                 ))}
                             </div>
@@ -238,7 +253,7 @@ const ResearchPortfolio: React.FC = () => {
                     </div>
                 </section>
             </main>
-        </div>
+        </div >
     )
 }
 
