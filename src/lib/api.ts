@@ -21,7 +21,7 @@ export async function fetchTeachings(): Promise<Teaching[]> {
 }
 
 export async function fetchResearcherInfo(): Promise<ResearcherInfo> {
-  const response = await fetch(`${API_URL}/profiles/${USER_ID}`);
+  const response = await fetch(`${API_URL}/profile/${USER_ID}`);
   if (!response.ok) {
     throw new Error('Failed to fetch researcher info');
   }
